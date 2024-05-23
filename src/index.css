@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+}
+
+/* For Older Firefox
+*{
+    scrollbar-width: thin;
+    scrollbar-color: rgb(173, 172, 172) white;
+}
+*/
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 8px;
+    display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+    height: 2px;
+    background-color: rgb(173, 172, 172);
+    border-radius: 10px;
+    border: 4px solid white;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(143, 142, 142);
+}
+
+*::-webkit-scrollbar-button {
+    display: none;
+}
+
+.ant-layout-sider-children {
+    display: grid;
+}
