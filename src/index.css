@@ -1,13 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800;900&display=swap');
+
 body {
     margin: 0px;
+    /* font-family: "Poppins", sans-serif; */
 }
-
-/* For Older Firefox
-*{
-    scrollbar-width: thin;
-    scrollbar-color: rgb(173, 172, 172) white;
-}
-*/
 
 *::-webkit-scrollbar {
     width: 10px;
@@ -35,6 +31,6 @@ body {
     display: none;
 }
 
-.ant-layout-sider-children {
+.custom-sider>.ant-layout-sider-children {
     display: grid;
 }

@@ -22,6 +22,7 @@ const Sidebar: React.FC = () => {
       trigger={null}
       collapsible
       collapsed={collapsed}
+      className="custom-sider"
       style={{
         borderRight: 0,
         display: 'grid',

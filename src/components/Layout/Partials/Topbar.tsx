@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Layout } from "antd";
-import AuthenticatedTopbarMenu from "../Authenticated/TopbarMenu";
-import { useLocation, useMatch,  } from "react-router-dom";
+import AuthenticatedTopbarMenu from "../Authenticated/AuthenticatedTopbarMenu";
+import { useMatch,  } from "react-router-dom";
 
 const { Header } = Layout;
 
 const Topbar: React.FC = () => {
-  const location = useLocation();
   const match = useMatch("/dashboard/*");
-  console.log(location.pathname)
   return (
     <Header
       style={{

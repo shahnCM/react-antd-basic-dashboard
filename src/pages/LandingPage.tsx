@@ -1,8 +1,8 @@
 // src/views/ContentView.tsx
 import React from "react";
-// import CommonLayout from "../components/Layout/Common/CommonLayout";
 import { Button, Typography, Layout, Card } from "antd";
 import { useNavigate } from "react-router-dom";
+// import CommonLayout from "../components/Layout/Common/CommonLayout";
 
 const { Title, Paragraph } = Typography;
 const { Content } = Layout;
