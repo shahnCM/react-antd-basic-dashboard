@@ -25,9 +25,9 @@ const Sidebar: React.FC = () => {
       className="custom-sider"
       style={{
         borderRight: 0,
-        display: 'grid',
         borderRadius: '8px',
         margin: '15px 0 15px 15px',
+        // minHeight: '60vh'
       }}
     >
       <Menu

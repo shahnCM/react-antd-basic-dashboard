@@ -1,33 +1,33 @@
 import React, { ReactNode } from "react";
 
 import { Layout } from "antd";
-import Sidebar from "../Partials/Sidebar";
 import { Outlet } from "react-router-dom";
+import Sidebar from "../Partials/Sidebar";
 
-interface MainLayoutProps {
+interface LayoutProps {
   children?: ReactNode;
 }
 
 const { Content } = Layout;
-const AuthenticatedLayout: React.FC<MainLayoutProps> = (/*{ children }*/) => {
-
+const AuthenticatedLayout: React.FC<LayoutProps> = (/*{ children }*/) => {
   return (
-    <Layout>
+    <Layout
+      className="AuthenticatedLayout"
+      style={{ overflow: "hidden", display: "flex", flexDirection: "row" }}
+    >
       <Sidebar />
-      <Layout>
-        <Content
-          style={{
-            margin: "15px 15px",
-            padding: 25,
-            minHeight: 280,
-            background: 'white',
-            borderRadius: '8px',
-          }}
-        >
-          {/* {children} */}
-          <Outlet />
-        </Content>
-      </Layout>
+      <Content
+        style={{
+          margin: "15px 15px",
+          padding: 25,
+          minHeight: 280,
+          background: "white",
+          borderRadius: "8px",
+        }}
+      >
+        {/* {children} */}
+        <Outlet />
+      </Content>
     </Layout>
   );
 };
