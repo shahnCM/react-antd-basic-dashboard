@@ -1,6 +1,6 @@
-import { Spin } from "antd";
 import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 const LandingPage  = lazy(() => import("./pages/LandingPage"));
 const ContentPage  = lazy(() => import("./pages/dashboard/DashboardIndex"));
@@ -12,7 +12,7 @@ const MainLayout   = lazy(() => import("./components/Layout/Authenticated/Authen
 const AppRouter: React.FC = () => {
   return (
     <Router>
-      <Suspense fallback={<Spin size="large" style={{ textAlign: "center" }} />}>
+      <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           <Route path="/" element={<CommonLayout />}>
             <Route index element={<LandingPage />} />
