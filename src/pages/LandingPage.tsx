@@ -1,30 +1,15 @@
 import React from "react";
-import { Button, Typography, Layout, Card } from "antd";
-import { useNavigate } from "react-router-dom";
+import { Card } from "antd";
+import Hero from "../components/Hero";
 
-const { Title, Paragraph } = Typography;
-const { Content } = Layout;
-
-const ContentPage: React.FC = () => {
-  const nav = useNavigate();
+const LandingPage: React.FC = () => {
   return (
-    <Content style={{ padding: "15px", textAlign: "center" }}>
-      <Card style={{ marginTop: "0px", width: "100%", height: "100%" }}>
-        <Title>Discover Amazing Features</Title>
-        <Paragraph>
-          Explore the awesome functionalities of our application.
-        </Paragraph>
-        <Button
-          type="primary"
-          size="large"
-          style={{ border: 0, borderRadius: "0px" }}
-          onClick={() => nav("/dashboard")}
-        >
-          Get Started
-        </Button>
+    <>
+      <Card bordered={false}>
+        <Hero />
       </Card>
-    </Content>
+    </>
   );
 };
 
-export default ContentPage;
+export default LandingPage;

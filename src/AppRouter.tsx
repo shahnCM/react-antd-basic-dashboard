@@ -1,6 +1,8 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingSpinner from "./components/LoadingSpinner";
+import LogInRegistrationPage from "./pages/Auth/LogInRegistrationPage";
+import TodoPage from "./pages/dashboard/TodoPage";
 
 const LandingPage  = lazy(() => import("./pages/LandingPage"));
 const ContentPage  = lazy(() => import("./pages/dashboard/DashboardIndex"));
@@ -16,10 +18,12 @@ const AppRouter: React.FC = () => {
         <Routes>
           <Route path="/" element={<CommonLayout />}>
             <Route index element={<LandingPage />} />
+            <Route path="auth" element={<LogInRegistrationPage />} />
             <Route path="dashboard" element={<MainLayout />}>
               <Route index element={<ContentPage />} />
               <Route path="1" element={<ContentPage1 />} />
               <Route path="2" element={<ContentPage2 />} />
+              <Route path="todos" element={<TodoPage />} />
             </Route>
           </Route>
         </Routes>

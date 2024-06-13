@@ -18,15 +18,15 @@ const AuthenticatedLayout: React.FC<LayoutProps> = (/*{ children }*/) => {
       <Sidebar />
       <Content
         style={{
-          margin: "15px 15px",
-          padding: 25,
-          minHeight: 280,
+          margin: "0 0 0 8px",
+          padding: 8,
           background: "white",
-          borderRadius: "8px",
+          borderRadius: 8,
         }}
       >
-        {/* {children} */}
-        <Outlet />
+        <div style={{ borderRadius: 8, paddingRight: 4, maxHeight: "calc(100vh - 130px)", overflow: "auto" }}>
+          <Outlet /> {/* {children} */}
+        </div>
       </Content>
     </Layout>
   );

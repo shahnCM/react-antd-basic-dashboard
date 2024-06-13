@@ -5,14 +5,16 @@ const LoadingSpinner = () => {
     <div
       style={{
         display: "flex",
+        flex: 1,
+        alignContent: "center",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh", // Full viewport height
-        width: "100vw", // Full viewport width
-        backgroundColor: "#f0f2f5", // Optional: Add a background color
+        maxHeight: "100vh", // Full viewport height
+        maxWidth: "100vw", // Full viewport width
+        backgroundColor: "transparent", // Optional: Add a background color
       }}
     >
-      <Spin size="large" />
+      <Spin style={{flex: 1}} size="large" />
     </div>
   );
 };
